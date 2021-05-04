@@ -1,6 +1,6 @@
-﻿using CodeBase.Logic;
+﻿using CodeBase.Infrastructure.States;
+using CodeBase.Logic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace CodeBase.Infrastructure
 {
