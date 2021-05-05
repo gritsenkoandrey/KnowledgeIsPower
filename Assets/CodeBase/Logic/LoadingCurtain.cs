@@ -5,10 +5,12 @@ namespace CodeBase.Logic
 {
     public class LoadingCurtain : MonoBehaviour
     {
-        [SerializeField] private CanvasGroup _curtain = null;
+        private CanvasGroup _curtain;
 
         private void Awake()
         {
+            _curtain = GetComponent<CanvasGroup>();
+            
             DontDestroyOnLoad(this);
         }
 
