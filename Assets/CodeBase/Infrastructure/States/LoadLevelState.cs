@@ -1,8 +1,11 @@
 ﻿using CodeBase.CameraLogic;
+using CodeBase.Hero;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Infrastructure.Services.PersistentProgress;
 using CodeBase.Logic;
+using CodeBase.UI;
 using UnityEngine;
+using ISavedProgressReader = CodeBase.Infrastructure.Services.PersistentProgress.ISavedProgressReader;
 
 namespace CodeBase.Infrastructure.States
 {
@@ -32,11 +35,9 @@ namespace CodeBase.Infrastructure.States
             _sceneLoader.Load(sceneName, OnLoaded);
         }
 
-        public void Exit()
-        {
+        public void Exit() => 
             _curtain.Hide();
-        }
-        
+
         private void OnLoaded()
         {
             InitGameWorld();
@@ -55,9 +56,14 @@ namespace CodeBase.Infrastructure.States
         {
             GameObject hero = _gameFactory.CreateHero(at: GameObject.FindWithTag(InitialPointTag));
 
-            _gameFactory.CreateHud();
-
+            InitHud(hero);
             CameraFollow(hero);
+        }
+
+        private void InitHud(GameObject hero)
+        {
+            GameObject hud = _gameFactory.CreateHud();
+            hud.GetComponentInChildren<ActorUI>().Construct(hero.GetComponent<HeroHealth>());
         }
 
         private void CameraFollow(GameObject hero) => 

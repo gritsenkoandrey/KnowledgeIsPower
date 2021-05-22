@@ -29,7 +29,7 @@ namespace CodeBase.Enemy
 
         private void Update()
         {
-            if (Initialized() && HeroNotReached())
+            if (Initialized() && HeroNotReached()) 
                 _agent.destination = _heroTransform.position;
         }
 
