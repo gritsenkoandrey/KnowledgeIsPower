@@ -1,6 +1,4 @@
 ﻿using System.Linq;
-using CodeBase.Infrastructure.Factory;
-using CodeBase.Infrastructure.Services;
 using CodeBase.Logic;
 using UnityEngine;
 
@@ -10,9 +8,9 @@ namespace CodeBase.Enemy
     public class Attack : MonoBehaviour
     {
         [SerializeField] private float _attackCooldown = 3f;
-        [SerializeField] private float _cleavage = 0.5f;
-        [SerializeField] private float _effectiveDistance = 0.5f;
-        [SerializeField] private float _damage = 10f;
+        public float cleavage;
+        public float effectiveDistance;
+        public float damage;
 
         private int _layerMask;
         private float _cooldown;
@@ -20,15 +18,15 @@ namespace CodeBase.Enemy
         private bool _attackIsActive;
 
         private EnemyAnimator _animator;
-        private IGameFactory _factory;
         private Transform _heroTransform;
         private Collider[] _hits = new Collider[1];
+
+        public void Construct(Transform heroTransform) => 
+            _heroTransform = heroTransform;
 
         private void Awake()
         {
             _animator = GetComponent<EnemyAnimator>();
-            _factory = AllServices.Container.Single<IGameFactory>();
-            _factory.HeroCreated += OnHeroCreated;
             _layerMask = 1 << LayerMask.NameToLayer("Player");
         }
 
@@ -44,9 +42,9 @@ namespace CodeBase.Enemy
         {
             if (Hit(out Collider hit))
             {
-                PhysicsDebug.DrawDebug(StartPoint(), _cleavage, 1);
+                PhysicsDebug.DrawDebug(StartPoint(), cleavage, 1);
                 
-                hit.transform.GetComponent<IHealth>().TakeDamage(_damage);
+                hit.transform.GetComponent<IHealth>().TakeDamage(damage);
             }
         }
 
@@ -83,16 +81,13 @@ namespace CodeBase.Enemy
             _cooldown <= 0;
 
         private Vector3 StartPoint() => 
-            new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z) + transform.forward * _effectiveDistance;
+            new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z) + transform.forward * effectiveDistance;
 
         private bool Hit(out Collider hit)
         {
-            int hitsCount = Physics.OverlapSphereNonAlloc(StartPoint(), _cleavage, _hits, _layerMask);
+            int hitsCount = Physics.OverlapSphereNonAlloc(StartPoint(), cleavage, _hits, _layerMask);
             hit = _hits.FirstOrDefault();
             return hitsCount > 0;
         }
-
-        private void OnHeroCreated() => 
-            _heroTransform = _factory.HeroGameObject.transform;
     }
 }

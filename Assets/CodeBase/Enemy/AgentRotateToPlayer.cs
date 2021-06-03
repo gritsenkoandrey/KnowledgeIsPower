@@ -10,17 +10,9 @@ namespace CodeBase.Enemy
 
         private Transform _heroTransform;
         private Vector3 _positionToLook;
-        private IGameFactory _gameFactory;
 
-        private void Start()
-        {
-            _gameFactory = AllServices.Container.Single<IGameFactory>();
-
-            if (_gameFactory.HeroGameObject != null)
-                InitializeHeroTransform();
-            else
-                _gameFactory.HeroCreated += InitializeHeroTransform;
-        }
+        public void Construct(Transform heroTransform) => 
+            _heroTransform = heroTransform;
 
         private void Update()
         {
@@ -52,8 +44,5 @@ namespace CodeBase.Enemy
 
         private bool Initialized() => 
             _heroTransform != null;
-        
-        private void InitializeHeroTransform() => 
-            _heroTransform = _gameFactory.HeroGameObject.transform;
     }
 }
