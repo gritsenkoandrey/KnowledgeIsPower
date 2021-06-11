@@ -780,12 +780,18 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 8f39312bb31469546af836b39c2d8e46, type: 2}
+      objectReference: {fileID: 22100000, guid: 7c951d853392440dcbdbdef122b58394,
+        type: 2}
     - target: {fileID: 95206231959375140, guid: 274c4c35ed05ea14c87492064b3cadfd,
         type: 3}
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 9000000, guid: 8b2d11d64877f0b4cad5d45ec7d53473, type: 3}
+    - target: {fileID: 2095414419968048969, guid: 274c4c35ed05ea14c87492064b3cadfd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5967463110166386197, guid: 274c4c35ed05ea14c87492064b3cadfd,
         type: 3}
       propertyPath: m_IsActive

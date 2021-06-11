@@ -12,5 +12,8 @@ namespace CodeBase.StaticData
         [Range(0.5f, 1f)]public float EffectiveDistance;
         [Range(0.5f, 1f)]public float Cleavage;
         public GameObject Prefab;
+
+        public int MaxLoot;
+        public int MinLoot;
     }
 }

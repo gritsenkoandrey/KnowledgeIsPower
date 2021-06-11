@@ -19,3 +19,5 @@ MonoBehaviour:
   EffectiveDistance: 1
   Cleavage: 1
   Prefab: {fileID: 6059715192866476929, guid: 719c5aea68fe78f499b324621d136d7c, type: 3}
+  MaxLoot: 1
+  MinLoot: 5
