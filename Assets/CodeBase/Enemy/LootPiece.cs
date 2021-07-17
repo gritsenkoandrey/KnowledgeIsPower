@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using CodeBase.Data;
+using CodeBase.Logic;
 using TMPro;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ namespace CodeBase.Enemy
         public GameObject PickUpFXPrefab;
         public GameObject PickUpPopup;
         public TextMeshPro LootText;
+        public UniqueId Id;
 
         private Loot _loot;
         private bool _picked;
@@ -19,9 +21,32 @@ namespace CodeBase.Enemy
         public void Construct(WorldData worldData) => 
             _worldData = worldData;
 
-        public void Initialize(Loot loot) => 
+        public void Initialize(Loot loot)
+        {
             _loot = loot;
 
+            if (IsNewLoot())
+                InitLootItem();
+            else
+                InitLootPiece(loot);
+        }
+
+        private void InitLootPiece(Loot loot)
+        {
+            Id.Id = loot.Id;
+        }
+
+        private void InitLootItem()
+        {
+            _loot.Id = Id.Id;
+            _worldData.LootData.UnpickedLoot.Loot.Add(_loot);
+        }
+        
+        private bool IsNewLoot()
+        {
+            return _loot.Id == null;
+        }
+        
         private void OnTriggerEnter(Collider other) => 
             PickUp();
 

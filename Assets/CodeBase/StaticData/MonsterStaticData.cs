@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace CodeBase.StaticData
 {
@@ -11,7 +12,7 @@ namespace CodeBase.StaticData
         [Range(1f, 30f)]public float Speed;
         [Range(0.5f, 1f)]public float EffectiveDistance;
         [Range(0.5f, 1f)]public float Cleavage;
-        public GameObject Prefab;
+        public AssetReferenceGameObject PrefabReference;
 
         public int MaxLoot;
         public int MinLoot;

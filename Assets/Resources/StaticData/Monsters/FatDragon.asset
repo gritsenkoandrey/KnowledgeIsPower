@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9efb5aa7182f4193ba99f667fd994fc7, type: 3}
-  m_Name: Lich
+  m_Name: FatDragon
   m_EditorClassIdentifier: 
-  MonsterTypeId: 0
-  Hp: 5
-  Damage: 5
-  Speed: 4
+  MonsterTypeId: 2
+  Hp: 100
+  Damage: 30
+  Speed: 5
   EffectiveDistance: 1
-  Cleavage: 1
+  Cleavage: 0.5
   PrefabReference:
-    m_AssetGUID: 11fbc0f8084efae4c82bcc3fe7782253
+    m_AssetGUID: c09d884e7ca40460f91e5b20675d3e94
     m_SubObjectName: 
-  MaxLoot: 1
-  MinLoot: 7
+  MaxLoot: 500
+  MinLoot: 250

@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace CodeBase.Data
 {
@@ -6,5 +7,7 @@ namespace CodeBase.Data
     public class Loot
     {
         public int Value;
+        public Vector3 Position;
+        public string Id;
     }
 }

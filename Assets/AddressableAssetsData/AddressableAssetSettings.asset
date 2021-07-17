@@ -18,9 +18,9 @@ MonoBehaviour:
   m_DisableCatalogUpdateOnStart: 0
   m_UniqueBundleIds: 0
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id: cc8d05e97827c1c48b4a1d43a4a37ae2
   m_RemoteCatalogLoadPath:
-    m_Id: 
+    m_Id: 87b0b24b04a111b42afb8b495317a462
   m_overridePlayerVersion: 
   m_GroupAssets:
   - {fileID: 11400000, guid: 2874d9d54b6ffd743a598900e8dc29a6, type: 2}

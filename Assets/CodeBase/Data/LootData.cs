@@ -9,6 +9,13 @@ namespace CodeBase.Data
         
         public int Collected;
 
+        public UnpickedLoot UnpickedLoot;
+
+        public LootData()
+        {
+            UnpickedLoot = new UnpickedLoot();
+        }
+        
         public void Collect(Loot loot)
         {
             Collected += loot.Value;

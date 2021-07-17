@@ -16,7 +16,65 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: d9315a5c9716c9743a332a4f9aa5ec7b
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 06010a198adc6794e85b46faa0f2e143
+    m_Address: UIRoot
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 11fbc0f8084efae4c82bcc3fe7782253
+    m_Address: LichStalker
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 1083610957851260269, guid: 11fbc0f8084efae4c82bcc3fe7782253,
+      type: 3}
+    m_TargetAsset: {fileID: 1083610957851260269, guid: 11fbc0f8084efae4c82bcc3fe7782253,
+      type: 3}
+  - m_GUID: 181862a89f60d7a459002f9870860ad4
+    m_Address: Hero
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 664da4a204d5ff2499737e1792203937
+    m_Address: LichGuard
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 6ae54f4b40168c542af1d363a58c0ac2
+    m_Address: SpawnPoint
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 3133596835267091695, guid: 6ae54f4b40168c542af1d363a58c0ac2,
+      type: 3}
+    m_TargetAsset: {fileID: 3133596835267091695, guid: 6ae54f4b40168c542af1d363a58c0ac2,
+      type: 3}
+  - m_GUID: 719c5aea68fe78f499b324621d136d7c
+    m_Address: Golem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c09d884e7ca40460f91e5b20675d3e94
+    m_Address: FatDragon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: d587ba2fd38b20449986c007d26d2b8a
+    m_Address: Loot
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: f6395af14c6ae2d4ea00c7e97e633ad3
+    m_Address: Hud
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b824fa31f667db94e864159cfc846a4b, type: 2}
   m_SchemaSet:
