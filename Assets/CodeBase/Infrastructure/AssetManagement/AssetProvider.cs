@@ -14,10 +14,8 @@ namespace CodeBase.Infrastructure.AssetManagement
         private readonly Dictionary<string, List<AsyncOperationHandle>> _handles =
             new Dictionary<string, List<AsyncOperationHandle>>();
 
-        public void Initialize()
-        {
+        public void Initialize() => 
             Addressables.InitializeAsync();
-        }
 
         public async Task<T> Load<T>(AssetReference assetReference) where T : class
         {
@@ -42,6 +40,9 @@ namespace CodeBase.Infrastructure.AssetManagement
 
         public Task<GameObject> Instantiate(string address, Vector3 at) => 
             Addressables.InstantiateAsync(address, at, Quaternion.identity).Task;
+        
+        public Task<GameObject> Instantiate(string address, Transform under) => 
+            Addressables.InstantiateAsync(address, under).Task;
 
         public void CleanUp()
         {

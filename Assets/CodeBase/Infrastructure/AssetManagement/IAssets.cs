@@ -13,5 +13,6 @@ namespace CodeBase.Infrastructure.AssetManagement
         Task<GameObject> Instantiate(string path);
         Task<GameObject> Instantiate(string path, Vector3 at);
         void CleanUp();
+        Task<GameObject> Instantiate(string address, Transform under);
     }
 }

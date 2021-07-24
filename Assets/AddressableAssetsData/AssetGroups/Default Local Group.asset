@@ -27,16 +27,22 @@ MonoBehaviour:
     m_Address: LichStalker
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 1083610957851260269, guid: 11fbc0f8084efae4c82bcc3fe7782253,
-      type: 3}
-    m_TargetAsset: {fileID: 1083610957851260269, guid: 11fbc0f8084efae4c82bcc3fe7782253,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 181862a89f60d7a459002f9870860ad4
     m_Address: Hero
     m_ReadOnly: 0
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 4f126698f5074cb4d87e9dc6d33b94e5
+    m_Address: ShopItem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 3162002891086728706, guid: 4f126698f5074cb4d87e9dc6d33b94e5,
+      type: 3}
+    m_TargetAsset: {fileID: 3162002891086728706, guid: 4f126698f5074cb4d87e9dc6d33b94e5,
+      type: 3}
   - m_GUID: 664da4a204d5ff2499737e1792203937
     m_Address: LichGuard
     m_ReadOnly: 0
@@ -47,16 +53,26 @@ MonoBehaviour:
     m_Address: SpawnPoint
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 3133596835267091695, guid: 6ae54f4b40168c542af1d363a58c0ac2,
-      type: 3}
-    m_TargetAsset: {fileID: 3133596835267091695, guid: 6ae54f4b40168c542af1d363a58c0ac2,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 719c5aea68fe78f499b324621d136d7c
     m_Address: Golem
     m_ReadOnly: 0
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 8925c87a7beb94c4bb8da70f92affebc
+    m_Address: iap_icon_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2800000, guid: 8925c87a7beb94c4bb8da70f92affebc, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 8925c87a7beb94c4bb8da70f92affebc, type: 3}
+  - m_GUID: 8a38e0c362c83a047983d02b417b0980
+    m_Address: iap_icon_18
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2800000, guid: 8a38e0c362c83a047983d02b417b0980, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 8a38e0c362c83a047983d02b417b0980, type: 3}
   - m_GUID: c09d884e7ca40460f91e5b20675d3e94
     m_Address: FatDragon
     m_ReadOnly: 0
@@ -69,6 +85,12 @@ MonoBehaviour:
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: ea9306e1aa95eb8439400efefff9f8db
+    m_Address: iap_icon_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2800000, guid: ea9306e1aa95eb8439400efefff9f8db, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: ea9306e1aa95eb8439400efefff9f8db, type: 3}
   - m_GUID: f6395af14c6ae2d4ea00c7e97e633ad3
     m_Address: Hud
     m_ReadOnly: 0
